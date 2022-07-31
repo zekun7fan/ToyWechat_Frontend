@@ -23,17 +23,3 @@ export function getPictureUrl(url: string) : string {
 }
 
 
-//
-//
-// export function getUserInfo(): User | null{
-//     const id = localStorage.getItem(user_id_key)
-//     if (id == null){
-//         return  null;
-//     }
-//     return {
-//         id: parseInt(id),
-//         name: localStorage.getItem(user_name_key) as string,
-//         type: parseInt(localStorage.getItem(user_type_key) as string),
-//     }
-// }
-//

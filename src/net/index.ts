@@ -12,10 +12,6 @@ import {
 import {Friend, Message, PostComment, PostContent, Request, User} from "./interfaces";
 
 
-
-
-
-
 export function getUserById(uid: string) {
     return get('/user_service/user/byid', {uid})
 }
@@ -36,12 +32,12 @@ export function retrieveMessage(uid: string) {
 }
 
 
-export function addComment(pid: string, comment: PostComment){
+export function addComment(pid: string, comment: PostComment) {
     return post(comment_url(pid), {}, comment)
 }
 
 
-export function deleteComment(pid: string, cid: string){
+export function deleteComment(pid: string, cid: string) {
     return del(comment_url(pid), {cid})
 }
 
@@ -55,11 +51,9 @@ export function addPostContent(uid: string, content: PostContent) {
 }
 
 
-
 export function delPostContent(uid: string, pid: string) {
     return del(content_url(uid), {pid})
 }
-
 
 
 export function getNewPostContent(uid: string, id: number) {
@@ -70,7 +64,6 @@ export function getNewPostContent(uid: string, id: number) {
 export function getOldPostContent(uid: string, id: number) {
     return get(content_url(uid), {id, dir: 'old'})
 }
-
 
 
 export function discoveryNewPostList(uid: string, obj: Object) {
@@ -111,7 +104,6 @@ export function handleRequest(request: Request) {
 export function getSentAndPendingRequests(uid: string) {
     return get(request_url, {uid, dir: 0, status: 0})
 }
-
 
 
 export function getSentAndFinishedRequests(uid: string) {
@@ -186,17 +178,17 @@ export function getVisibleFriendIdList(uid: string) {
 
 
 export function retrieveMessageAfterOffset(uid: string, topic: string, offset: number) {
-    return get(message_url, {uid, topic, offset, dir:'after'})
+    return get(message_url, {uid, topic, offset, dir: 'after'})
 }
 
 
 export function retrieveMessageBeforeOffset(uid: string, topic: string, offset: number) {
-    return get(conditional_message_url, {uid, topic, offset, dir:'before'})
+    return get(conditional_message_url, {uid, topic, offset, dir: 'before'})
 }
 
 
 export function retrieveNewestMessage(uid: string, topic: string) {
-    return get(conditional_message_url, {uid, topic, dir:'newest', offset: 0})
+    return get(conditional_message_url, {uid, topic, dir: 'newest', offset: 0})
 }
 
 

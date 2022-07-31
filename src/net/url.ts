@@ -1,6 +1,3 @@
-
-
-
 export const user_url = `/user_service/user`
 
 export const message_url = `/message_service/message`
@@ -12,10 +9,11 @@ export const conditional_message_url = `/message_service/conditional_message`
 export const request_url = `/request_service/request`
 
 
-
 export const login_url = `/user_service/toLogin`
 
 export const register_url = `/user_service/toRegister`
+
+
 export const logout_url = `/user_service/toLogout`
 
 
@@ -39,12 +37,9 @@ export function comment_url(pid: string) {
 }
 
 
-
 export function content_url(uid: string) {
     return `/post_content_service/${uid}/postContent`
 }
-
-
 
 
 export function post_like_url(pid: string) {
@@ -55,8 +50,6 @@ export function post_like_url(pid: string) {
 export function discovery_url(uid: string) {
     return `/post_content_service/${uid}/discovery`
 }
-
-
 
 
 export function userById(uid: string) {

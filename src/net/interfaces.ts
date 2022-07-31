@@ -1,16 +1,11 @@
-
-
-
 export interface DTO {
 
 }
 
 
-
 export interface ReqQueryParams {
 
 }
-
 
 
 export interface Resp {
@@ -21,8 +16,7 @@ export interface Resp {
 }
 
 
-
-export interface User extends DTO{
+export interface User extends DTO {
     id?: number,
     userId?: string,
     name?: string,
@@ -36,7 +30,7 @@ export interface User extends DTO{
 }
 
 
-export interface Message extends DTO{
+export interface Message extends DTO {
     uid: string,
     topic: string,
     msg: string,
@@ -46,9 +40,8 @@ export interface Message extends DTO{
 
 
 export interface UserPicInfo {
-    url : string
+    url: string
 }
-
 
 
 export interface DiscoveryResult {
@@ -58,7 +51,7 @@ export interface DiscoveryResult {
 }
 
 
-export interface PostComment extends DTO{
+export interface PostComment extends DTO {
     id?: number,
     postCommentId?: string,
     postContentId?: string,
@@ -69,10 +62,7 @@ export interface PostComment extends DTO{
 }
 
 
-
-
-
-export interface PostContent extends DTO{
+export interface PostContent extends DTO {
     id?: number,
     postContentId?: string,
     userId: string,
@@ -80,7 +70,7 @@ export interface PostContent extends DTO{
     createTime?: Date
 }
 
-export interface Request extends DTO{
+export interface Request extends DTO {
     id?: number,
     requestUserId?: string,
     handleUserId?: string,
@@ -89,7 +79,7 @@ export interface Request extends DTO{
 }
 
 
-export interface Friend extends DTO{
+export interface Friend extends DTO {
     id?: number,
     userId?: string,
     friendId?: string,

@@ -1,5 +1,5 @@
 import axios, {AxiosRequestHeaders} from "axios";
-import { createBrowserHistory } from "history";
+import {createBrowserHistory} from "history";
 import {user_token_key} from "../utils/user";
 import {DTO, ReqQueryParams} from "./interfaces";
 
@@ -14,8 +14,6 @@ axios.defaults.baseURL = baseURL;
 
 
 const history = createBrowserHistory();
-
-
 
 
 export function toQueryString(param: any = {}): string {
